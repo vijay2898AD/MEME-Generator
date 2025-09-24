@@ -200,3 +200,60 @@ h2{
   text-align: center;
   margin-top: 2.5rem;
 }
+
+@media (max-width: 767px) {
+    .meme-app-container {
+        flex-direction: column;
+        padding: 1rem;
+        min-width: unset; /* Remove the fixed min-width for mobile */
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .sidebar {
+        margin-top: 1rem; /* Reduce top margin on mobile */
+        width: 90%; /* Take up most of the screen width */
+        margin: 0 auto; /* Center the sidebar */
+    }
+
+    .main-content {
+        margin: 0 auto; /* Center the main content */
+        width: 90%; /* Take up most of the screen width */
+        padding: 1rem;
+    }
+
+    .canvas-wrapper {
+        /* This will be handled by the parent container's width */
+        overflow-x: auto; /* Adds a horizontal scrollbar if the canvas is too wide */
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 200%;
+    }
+
+    h2, h3, p, li {
+        font-size: 1rem;
+    }
+
+    .app-description {
+        margin: 0 1rem; /* Adjust margins for mobile screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .meme-app-container {
+        padding: 0.5rem;
+    }
+
+    .sidebar, .main-content {
+        width: 100%; /* Full width on very small screens */
+        padding: 0.5rem;
+    }
+
+    .canvas-wrapper {
+        width: 100%; /* Full width for the canvas wrapper */
+        height: auto; /* Let height adjust based on content */
+    }
+}
