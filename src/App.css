@@ -257,3 +257,16 @@ h2{
         height: auto; /* Let height adjust based on content */
     }
 }
+
+footer {
+  text-align: center;
+  color: #00e5ff;
+  font-size: 0.9rem;
+  justify-content: center;
+  background-color: #3b424d;
+  border-radius: 8px;
+}
+footer p {
+  display: inline;
+  color: rgb(220, 11, 11);
+}
