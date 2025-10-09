@@ -2,19 +2,22 @@ body {
   background-color: #2e343b;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   color:white;
+  overflow-x: hidden;
 }
 
 .meme-app-container {
   display:flex;
-  min-width: 100vh;
+  width: 100%;
+  max-width: 1200px;
   padding: 2rem;
   gap: 2rem;
-  margin-left: 200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .app-description{
@@ -23,9 +26,9 @@ body {
   color: #d8d1d1;
   text-align: center;
   margin-bottom: 20px;
-  margin-left: 8rem;
-  margin-right: 8rem;
-
+  padding: 0 1rem;
+  width: 100%;
+  word-break: break-word;
 }
 
 .sidebar {
@@ -73,7 +76,7 @@ input[type="file"] {
 
 input[type="file"]::-webkit-file-upload-button {
   background-color: #01678f;
-  height: 90%;
+  height: auto;
 
   color: white;
   border: none;
@@ -95,6 +98,9 @@ input[type="text"] {
   border: 1px solid #01678f;
   background-color: #787878;
   font-weight: 600;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: white;
 }
 
 input[type="text"]::placeholder {
@@ -111,13 +117,15 @@ button {
 
 input[type="number"] {
   width: 100%;
-  height: 30px;
+  height: 48px;
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid #01678f;
   background-color: #787878;
   color: white;
   font-weight: 600;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
 
 button {
@@ -126,6 +134,9 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.75rem;
 }
 
 button:hover {
@@ -133,20 +144,23 @@ button:hover {
 }
 
 .main-content {
-  flex: 0; /* Takes up the remaining horizontal space */
-  padding: 0.5rem;
+  flex: 1;
+  min-width: 0;
   background-color: #3b424d;
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   object-fit: contain;
-  margin-left: 50px;
+  margin-left: 0;
 }
 
 .canvas-wrapper {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 4 / 3;
   border: 2px solid #ddd;
   background-color: #f0f0f0;
   border-radius: 4px;
@@ -163,6 +177,7 @@ canvas {
   width: 100%;
   height: 100%;
   cursor: crosshair;
+  object-fit: contain;
 }
 
 .footer {
@@ -254,6 +269,121 @@ h2{
     .canvas-wrapper {
         width: 100%; /* Full width for the canvas wrapper */
         height: auto; /* Let height adjust based on content */
+    }
+}
+
+@media (max-width: 1024px) {
+    .meme-app-container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    .app-description {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Small screens (most phones, portrait tablets) */
+@media (max-width: 768px) {
+    .meme-app-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem;
+        gap: 1.5rem; /* Gap between stacked items */
+        max-width: 100%; /* Allow full width */
+    }
+
+    .app-description {
+        margin-bottom: 15px;
+        padding: 0 1rem; /* Adjust padding */
+        font-size: 1rem; /* Reduce font size */
+    }
+
+    .sidebar {
+        flex: 1 1 auto; /* Allow sidebar to grow/shrink */
+        width: 100%; /* Take full width */
+        max-width: 400px; /* Optional: limit max width even when column */
+        margin: 0 auto; /* Center sidebar if it has max-width */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 250%; /* Adjust heading size */
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size */
+        margin-bottom: 1rem;
+    }
+
+    .main-content {
+        flex: 1 1 auto; /* Allow main-content to grow/shrink */
+        width: 100%; /* Take full width */
+        max-width: 400px; /* Optional: limit max width even when column */
+        margin: 0 auto; /* Center main-content */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .canvas-wrapper {
+        max-width: 100%; /* Ensure canvas wrapper fits */
+        aspect-ratio: 16 / 9; /* Maybe a wider aspect ratio for mobile memes */
+    }
+
+    .footer {
+        padding: 1rem; /* Adjust footer padding */
+        margin-top: 1rem; /* Space from canvas */
+    }
+
+    h2, h3, li {
+        font-size: 1rem; /* Adjust other text sizes */
+    }
+    li {
+        text-align: center; /* Center list items for better mobile flow */
+    }
+}
+
+/* Very small screens (e.g., iPhone SE, older small phones) */
+@media (max-width: 480px) {
+    .meme-app-container {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .app-description {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 0.75rem;
+        max-width: 100%; /* Ensure full width on smallest screens */
+    }
+
+    h1 {
+        font-size: 200%;
+        margin-bottom: 0.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    input[type="file"]::-webkit-file-upload-button,
+    input[type="text"],
+    input[type="number"],
+    button {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    h2, h3, li {
+        font-size: 0.9rem;
     }
 }
 
