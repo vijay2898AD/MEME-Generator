@@ -392,8 +392,8 @@ footer {
   color: #00e5ff;
   font-size: 0.9rem;
   justify-content: center;
-  background-color: #3b424d;
-  border-radius: 8px;
+  margin: 0px auto; /* Keep margin for spacing and centering */
+  box-sizing: border-box;
 }
 footer p {
   display: inline;
