@@ -334,14 +334,14 @@ h2{
     }
 
     h2, h3, li {
-        font-size: 1rem; /* Adjust other text sizes */
+        font-size: 1rem;
     }
     li {
-        text-align: center; /* Center list items for better mobile flow */
+        text-align: center; 
     }
 }
 
-/* Very small screens (e.g., iPhone SE, older small phones) */
+/* Very small screens */
 @media (max-width: 480px) {
     .meme-app-container {
         padding: 0.5rem;
@@ -356,7 +356,7 @@ h2{
     .sidebar,
     .main-content {
         padding: 0.75rem;
-        max-width: 100%; /* Ensure full width on smallest screens */
+        max-width: 100%; 
     }
 
     h1 {
@@ -392,7 +392,7 @@ footer {
   color: #00e5ff;
   font-size: 0.9rem;
   justify-content: center;
-  margin: 0px auto; /* Keep margin for spacing and centering */
+  margin: 0px auto; 
   box-sizing: border-box;
 }
 footer p {
