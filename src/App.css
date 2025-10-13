@@ -219,26 +219,25 @@ h2{
     .meme-app-container {
         flex-direction: column;
         padding: 1rem;
-        min-width: unset; /* Remove the fixed min-width for mobile */
+        min-width: unset; 
         margin: 0;
         gap: 1rem;
     }
 
     .sidebar {
-        margin-top: 1rem; /* Reduce top margin on mobile */
-        width: 90%; /* Take up most of the screen width */
-        margin: 0 auto; /* Center the sidebar */
+        margin-top: 1rem; 
+        width: 90%; 
+        margin: 0 auto; 
     }
 
     .main-content {
-        margin: 0 auto; /* Center the main content */
-        width: 90%; /* Take up most of the screen width */
+        margin: 0 auto; 
+        width: 90%; 
         padding: 1rem;
     }
 
     .canvas-wrapper {
-        /* This will be handled by the parent container's width */
-        overflow-x: auto; /* Adds a horizontal scrollbar if the canvas is too wide */
+        overflow-x: auto; 
     }
 }
 
@@ -252,7 +251,7 @@ h2{
     }
 
     .app-description {
-        margin: 0 1rem; /* Adjust margins for mobile screens */
+        margin: 0 1rem; 
     }
 }
 
@@ -282,7 +281,7 @@ h2{
     }
 }
 
-/* Small screens (most phones, portrait tablets) */
+
 @media (max-width: 768px) {
     .meme-app-container {
         flex-direction: column; 
@@ -341,7 +340,7 @@ h2{
     }
 }
 
-/* Very small screens */
+
 @media (max-width: 480px) {
     .meme-app-container {
         padding: 0.5rem;
