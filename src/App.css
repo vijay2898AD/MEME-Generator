@@ -262,13 +262,13 @@ h2{
     }
 
     .sidebar, .main-content {
-        width: 100%; /* Full width on very small screens */
+        width: 100%; 
         padding: 0.5rem;
     }
 
     .canvas-wrapper {
-        width: 100%; /* Full width for the canvas wrapper */
-        height: auto; /* Let height adjust based on content */
+        width: 100%; 
+        height: auto; 
     }
 }
 
@@ -285,33 +285,33 @@ h2{
 /* Small screens (most phones, portrait tablets) */
 @media (max-width: 768px) {
     .meme-app-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         padding: 1rem;
-        gap: 1.5rem; /* Gap between stacked items */
-        max-width: 100%; /* Allow full width */
+        gap: 1.5rem; 
+        max-width: 100%; 
     }
 
     .app-description {
         margin-bottom: 15px;
-        padding: 0 1rem; /* Adjust padding */
-        font-size: 1rem; /* Reduce font size */
+        padding: 0 1rem; 
+        font-size: 1rem; 
     }
 
     .sidebar {
-        flex: 1 1 auto; /* Allow sidebar to grow/shrink */
-        width: 100%; /* Take full width */
-        max-width: 400px; /* Optional: limit max width even when column */
-        margin: 0 auto; /* Center sidebar if it has max-width */
-        padding: 1rem; /* Reduce padding */
+        flex: 1 1 auto; 
+        width: 100%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+        padding: 1rem; 
     }
 
     h1 {
-        font-size: 250%; /* Adjust heading size */
+        font-size: 250%; 
         margin-bottom: 1rem;
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph size */
+        font-size: 1rem; 
         margin-bottom: 1rem;
     }
 
