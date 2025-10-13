@@ -316,21 +316,21 @@ h2{
     }
 
     .main-content {
-        flex: 1 1 auto; /* Allow main-content to grow/shrink */
-        width: 100%; /* Take full width */
-        max-width: 400px; /* Optional: limit max width even when column */
-        margin: 0 auto; /* Center main-content */
-        padding: 1rem; /* Reduce padding */
+        flex: 1 1 auto; 
+        width: 100%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+        padding: 1rem; 
     }
 
     .canvas-wrapper {
-        max-width: 100%; /* Ensure canvas wrapper fits */
-        aspect-ratio: 16 / 9; /* Maybe a wider aspect ratio for mobile memes */
+        max-width: 100%; 
+        aspect-ratio: 16 / 9; 
     }
 
     .footer {
-        padding: 1rem; /* Adjust footer padding */
-        margin-top: 1rem; /* Space from canvas */
+        padding: 1rem; 
+        margin-top: 1rem; 
     }
 
     h2, h3, li {
