@@ -286,7 +286,7 @@ const MemeGenerator = () => {
     <h2>Start creating your memes now and share them with your friends!</h2>
     </div>
     <footer>© 2024 Meme Generator. All rights reserved.</footer><br></br>
-    <footer>Developed with <p>&#10084;</p> by Vijay </footer>
+    <footer>Developed with <p>&#10084;</p> by Vijay</footer>
   </>
   );
 };
